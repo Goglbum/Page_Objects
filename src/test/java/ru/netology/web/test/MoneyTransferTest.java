@@ -38,15 +38,15 @@ class MoneyTransferTest {
     CardReplenishment.failedNumberCard(authInfo);
   }
 
-//  @Test
-//  void goingBeyondAmount() {
-//    open("http://localhost:9999");
-//    val loginPage = new LoginPage();
-//    val authInfo = DataHelper.getAuthInfo();
-//    val verificationPage = loginPage.validLogin(authInfo);
-//    val verificationCode = DataHelper.getVerificationCodeFor(authInfo);
-//    verificationPage.validVerify(verificationCode);
-//    CardReplenishment.goingBeyondAmount(authInfo);
-//  }
+  @Test
+  void goingBeyondAmount() {
+    open("http://localhost:9999");
+    val loginPage = new LoginPage();
+    val authInfo = DataHelper.getAuthInfo();
+    val verificationPage = loginPage.validLogin(authInfo);
+    val verificationCode = DataHelper.getVerificationCodeFor(authInfo);
+    verificationPage.validVerify(verificationCode);
+    CardReplenishment.goingBeyondAmount(authInfo);
+  }
 }
 

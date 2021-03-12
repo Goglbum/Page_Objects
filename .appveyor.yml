@@ -4,7 +4,7 @@ stack: jdk 1.8  # версия JDK
 
 branches:
   only:
-    - master  # ветка git
+    - akita  # ветка git
 
 build: off  # будем использовать свой скрипт сборки
 
@@ -14,4 +14,4 @@ install:
 
 build_script:
   - chmod +x gradlew
-  - ./gradlew clean generateCucumberReport --debug  # запускаем тест, флаг --info позволяет выводить больше информации
+  - ./gradlew clean test -i  # запускаем тест, флаг --info позволяет выводить больше информации
